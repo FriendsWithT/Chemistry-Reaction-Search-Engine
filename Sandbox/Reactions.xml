@@ -1,0 +1,33 @@
+<data>
+    <reaction>
+        <id>
+            1
+        </id>
+        <participant>
+            Cu
+        </participant>
+        <participant>
+            CuO
+        </participant>
+        <result>
+            Cu2O
+        </result>
+    </reaction>
+    <reaction>
+        <id>
+            2
+        </id>
+        <participant>
+            Cu
+        </participant>
+        <participant>
+            2HCl
+        </participant>
+        <result>
+            H2
+        </result>
+        <result>
+            CuCl2
+        </result>
+    </reaction>
+</data>
