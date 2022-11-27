@@ -14,10 +14,6 @@ class XMLReader(Reader):
         rctDoms = dom.getElementsByTagName("reaction")
 
         for rctDom in rctDoms:
-            # idDom = rctDom.getElementsByTagName("id")
-            # id = idDom.firstChild.nodeValue
-            # id = Trim(id)
-
             id = self.getValuesFromTag(rctDom, "id")[0]
             ptcps = self.getValuesFromTag(rctDom, "participant")
             rslts = self.getValuesFromTag(rctDom, "result")
