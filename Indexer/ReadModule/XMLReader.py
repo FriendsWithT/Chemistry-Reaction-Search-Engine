@@ -1,7 +1,7 @@
 from .BaseReader import Reader
 from xml.dom.minidom import parse
-from ..Utils.Text import Trim
-from ..Model.Reaction import Reaction
+from Indexer.Utils.Text import Trim
+from Indexer.Model.Reaction import Reaction
 
 class XMLReader(Reader):
     def __init__(self, sourceFile):

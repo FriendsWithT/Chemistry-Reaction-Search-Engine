@@ -1,26 +1,12 @@
-from xml.dom.minidom import Document
+from Indexer.ReadModule.XMLReader import XMLReader
+from Indexer.IndexModule.LetterIndexer import LetterIndexer
 
-XMLvalues = { 'a':'1', 'b':'2' }
-doc = Document()
+def main():
+    myReader = XMLReader("Reactions.xml")
+    reactions = myReader.read()
 
-root = doc.createElement("User")
-root.setAttribute( "id", 'myIdvalue' )
-root.setAttribute( "email", 'blabla@bblabla.com' )
+    myIndexer = LetterIndexer(reactions, outFile = "rctIdx")
+    myIndexer.index(verbose = True)
 
-doc.appendChild(root)
-
-for value in XMLvalues:
-    # Create Element
-    tempChild = doc.createElement(value)
-    root.appendChild(tempChild)
-
-# Write Text
-nodeText = doc.createTextNode( XMLvalues[value].strip() )
-tempChild.appendChild(nodeText)
-
-doc.writexml( open('data.xml', 'w'),
-            indent="  ",
-            addindent="  ",
-            newl='\n')
- 
-doc.unlink()
+if __name__ == "__main__":
+    main()

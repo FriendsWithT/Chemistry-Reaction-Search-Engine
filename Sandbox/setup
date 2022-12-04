@@ -1,0 +1,2 @@
+export PYTHONPATH=../
+echo PYTHONPATH is now $PYTHONPATH

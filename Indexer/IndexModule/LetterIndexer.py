@@ -1,4 +1,4 @@
-from ..Utils.Tokenizer import Tokenizer
+from Indexer.Utils.Tokenizer import Tokenizer
 from xml.dom.minidom import Document
 
 class LetterIndexer:
@@ -32,19 +32,20 @@ class LetterIndexer:
                 token = tokens[tkIdx]
                 tkEle = tkEleLut.get(token, None)
                 if not tkEle:
+                    sToken = str(token)
                     tkEle = doc.createElement("Token")
+                    tkEle.setAttribute("name", sToken)
                     root.appendChild(tkEle)
                     tkEleLut[token] = tkEle
 
                 rctEle = doc.createElement("Reaction")
-                rctEle.setAttribute("id", rct.id)
-                rctEle.setAttribute("Position", tkIdx)
+                sId = str(rct.id)
+                sIdx = str(tkIdx)
+                rctEle.setAttribute("id", sId)
+                rctEle.setAttribute("Position", sIdx)
                 tkEle.appendChild(rctEle)
 
         of = open('%s.xml' % self.outFile, 'w')
-        doc.writexml( of,
-            indent="  ",
-            addindent="  ",
-            newl='\n')
+        doc.writexml( of, indent="  ", addindent="  ", newl='\n')
         doc.unlink()
         of.close()

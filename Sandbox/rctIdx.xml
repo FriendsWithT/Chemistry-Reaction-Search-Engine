@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+  <Index>
+    <Token name="c">
+      <Reaction id="1" Position="0"/>
+      <Reaction id="1" Position="2"/>
+      <Reaction id="1" Position="5"/>
+      <Reaction id="2" Position="0"/>
+      <Reaction id="2" Position="3"/>
+      <Reaction id="2" Position="6"/>
+    </Token>
+    <Token name="u">
+      <Reaction id="1" Position="1"/>
+      <Reaction id="1" Position="3"/>
+      <Reaction id="1" Position="6"/>
+      <Reaction id="2" Position="1"/>
+      <Reaction id="2" Position="7"/>
+    </Token>
+    <Token name="o">
+      <Reaction id="1" Position="4"/>
+      <Reaction id="1" Position="7"/>
+    </Token>
+    <Token name="h">
+      <Reaction id="2" Position="2"/>
+      <Reaction id="2" Position="5"/>
+    </Token>
+    <Token name="l">
+      <Reaction id="2" Position="4"/>
+      <Reaction id="2" Position="8"/>
+    </Token>
+  </Index>
